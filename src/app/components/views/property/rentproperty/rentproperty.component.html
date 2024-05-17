@@ -1,0 +1,67 @@
+<div class="container" style="padding-top: 30px">
+  <div style="padding-bottom: 20px">
+    <select (change)="sortByPrice($event)">
+      Sort:
+      <option value="" aria-placeholder="Sort by price">Sort by Price</option>
+      <option value="asc">Sort by Price (Ascending)</option>
+      <option value="desc">Sort by Price (Descending)</option>
+    </select>
+  </div>
+
+  <div class="row row-cols-3 g-3">
+    <div class="col-sm-4" *ngFor="let property of properties">
+      <div class="card shadow-lg">
+        <div class="card-img-wrapper">
+          <img
+            src="{{property.imageUrl}}"
+            class="card-img-top"
+            alt="Hollywood Sign on The Hill"
+          />
+          <ul class="list-inline text-center member-icon animate">
+            <li class="list-inline-item">
+              <a
+                class="btn btn-primary"
+                routerLink="/propertydetail/{{ property.id }}"
+                routerLinkActive="router-link-active"
+              >
+                <i class="fa-solid fa-clipboard-list"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <button class="btn btn-primary">
+                <i class="fa-regular fa-address-card"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body p-1">
+          <h1 class="mb-0">
+            {{ property.bhk }} BHK {{ property.PropertyType }}
+          </h1>
+
+          in {{ property.name }}
+          <span *ngIf="property.name">,</span>
+          {{ property.CityName }}
+
+          <h6 class="mt-2">
+            {{ property.FurnishingType }}
+            <span *ngIf="property.FurnishingType !== 'Unfurnished'"></span>
+            <span *ngIf="property.readyToMove"> | Ready to Move</span>
+            <span *ngIf="!property.readyToMove">
+              | Posession:{{ date | date | uppercase }}</span
+            >
+          </h6>
+
+          <hr class="mt-0 mb-2" />
+
+          <h6 class="mb-0">
+            Price:
+            <span class="font-highlight">{{ property.price }} INR.</span> |
+            Area:
+            <span class="font-highlight">{{ property.builtArea }} Sq Ft </span>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

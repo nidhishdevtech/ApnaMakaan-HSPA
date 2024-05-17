@@ -1,0 +1,33 @@
+.navbar {
+    position: relative;
+    margin-top: 25px;
+    padding: 0 3rem; 
+    transition: .5s;
+    z-index: 9999;
+    border-radius: 7px;
+}
+
+/* header{
+    height: 75vh;
+    margin: auto;
+    border: 1px solid black;
+    transition: .3s linear;
+    background-image: url('../../../../assets/images/house1.png');
+    
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

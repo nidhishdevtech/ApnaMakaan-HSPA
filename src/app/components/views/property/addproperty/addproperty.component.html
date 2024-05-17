@@ -1,0 +1,123 @@
+<body>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 form-container">
+        <div class="form-box">
+        <form #from="ngForm" (ngSubmit)="onFormSubmit()">
+          <!-- <div class="form-group">
+            <label for="sellRent">Sell/Rent:</label>
+            <input type="number" class="form-control" id="sellRent" name="sellRent" [(ngModel)]="addprop.sellRent" required />
+          </div> -->
+          <div class="form-group">
+            <label for="sellRent" >Sell/Rent:</label>
+            <select class="form-control" id="sellRent" name="sellRent" [(ngModel)]="addprop.sellRent"  required >
+              <option value="2">Rent</option>
+              <option value="1">Sell</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="user">User:</label>
+            <input type="number" class="form-control" id="user" name="user" [(ngModel)]="addprop.user" required  />
+          </div>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="addprop.name" required />
+          </div>
+          <!-- <div class="form-group">
+            <label for="PropertyType">Property Type:</label>
+            <input type="text" class="form-control" id="PropertyType" name="PropertyType" [(ngModel)]="addprop.PropertyType" required  />
+          </div> -->
+          <div class="form-group">
+            <label for="propertyType">Property Type:</label>
+            <select class="form-control" id="propertyType" name="propertyType" [(ngModel)]="addprop.propertyTypeId" required >
+              <option value="">Select a property type</option>
+              <option *ngFor="let propertyType of propertyTypes" [value]="propertyType.id">{{ propertyType.propertyType1 }}</option>
+            </select>
+          </div>
+          
+          <!-- <div class="form-group">
+            <label for="FurnishingType">Furnishing Type:</label>
+            <input type="text" class="form-control" id="FurnishingType" name="FurnishingType" [(ngModel)]="addprop.FurnishingType" required />
+          </div> -->
+          <div class="form-group">
+            <label for="furnishingType">Furnishing Type:</label>
+            <select class="form-control" id="furnishingType" name="furnishingType" [(ngModel)]="addprop.furnishingTypeId" required>
+              <option value="">Select a furnishing type</option>
+              <option *ngFor="let furnishingType of furnishingTypes" [value]="furnishingType.id">{{ furnishingType.furnishingType1 }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" class="form-control" id="price" name="price"  [(ngModel)]="addprop.price" required />
+          </div>
+          <div class="form-group">
+            <label for="bhk">BHK:</label>
+            <input type="number" class="form-control" id="bhk" name="bhk" [(ngModel)]="addprop.bhk" required />
+          </div>
+          <div class="form-group">
+            <label for="builtArea">Built Area:</label>
+            <input type="number" class="form-control" id="builtArea" name="builtArea" [(ngModel)]="addprop.builtArea" required />
+          </div>
+          <div class="form-group">
+            <label for="cityprop">City:</label>
+            <select class="form-control" id="cityprop" name="cityprop" [(ngModel)]="addprop.cityId" required>
+              <option value="">Select a City</option>
+              <option *ngFor="let cityadd of cityprop" [value]="cityadd.id">{{ cityadd.cityName }}</option>
+            </select>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="readyToMove" name="readyToMove"  [(ngModel)]="addprop.readyToMove" />
+            <label class="form-check-label" for="readyToMove">Ready to Move</label>
+          </div>
+          <div class="form-group">
+            <label for="carpetArea">Carpet Area:</label>
+            <input type="number" class="form-control" id="carpetArea" name="carpetArea" [(ngModel)]="addprop.carpetArea"  required />
+          </div>
+          <div class="form-group">
+            <label for="address1">Address 1:</label>
+            <input type="text" class="form-control" id="address1" name="address1" [(ngModel)]="addprop.address1" required />
+          </div>
+          <div class="form-group">
+            <label for="address2">Address 2:</label>
+            <input type="text" class="form-control" id="address2" name="address2" [(ngModel)]="addprop.address2" required/>
+          </div>
+          <div class="form-group">
+            <label for="floorNo">Floor No:</label>
+            <input type="number" class="form-control" id="floorNo" name="floorNo" [(ngModel)]="addprop.floorNo" required />
+          </div>
+          <div class="form-group">
+            <label for="totalFloors">Total Floors:</label>
+            <input type="number" class="form-control" id="totalFloors" name="totalFloors" [(ngModel)]="addprop.totalFloors" required />
+          </div>
+          <div class="form-group">
+            <label for="mainEnterance">Main Entrance:</label>
+            <input type="text" class="form-control" id="mainEnterance" name="mainEnterance" [(ngModel)]="addprop.mainEnterance" required />
+          </div>
+          <div class="form-group">
+            <label for="security">Security:</label>
+            <input type="number" class="form-control" id="security" name="security" [(ngModel)]="addprop.security" required />
+          </div>
+          <div class="form-group">
+            <label for="maintenanceAmount">Maintenance Amount:</label>
+            <input type="number" class="form-control" id="maintenanceAmount" name="maintenanceAmount" [(ngModel)]="addprop.maintenanceAmount" required />
+          </div>
+          <div class="form-group">
+            <label for="ageProperty">Age of Property:</label>
+            <input type="number" class="form-control" id="ageProperty" name="ageProperty" [(ngModel)]="addprop.ageProperty" required />
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description" rows="3" [(ngModel)]="addprop.description" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="postedOn">Posted On:</label>
+            <input type="date" class="form-control" id="postedOn" name="postedOn" [(ngModel)]="addprop.postedOn" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    </div>  
+</div>
+

@@ -1,0 +1,51 @@
+.card {
+    min-height: 600px;
+  }
+  
+  .card img {
+    padding: 10px;
+    height: 250px;
+  }
+  
+  .card-img-wrapper {
+    height: 250px;
+  }
+
+  .carousel-indicators img{
+    width: 70px;
+    display: block;
+}
+.carousel-indicators button{
+    width: max-content!important;
+}
+.carousel-indicators{
+    position: unset;
+}
+
+.carousel-container{
+    margin-top: 16px;
+    width: 700px;
+    height: 300px;
+    
+}
+.imgmap{
+  object-fit: cover;
+}
+
+.container imgmap {
+  height: 100%;
+  width: 100%;
+  position:absolute;
+}
+
+
+
+
+
+
+
+
+
+  
+  
+  

@@ -1,0 +1,95 @@
+<br>
+<br>
+<h4>
+    &nbsp;&nbsp;&nbsp;&nbsp; User Registration Details
+</h4>
+ 
+<div class="center-container">
+    <div class="card text-center" style="border-color: transparent;">
+        <div>
+           
+        </div>
+        <div class="card-body" style="border-color: transparent;">
+            <div class="row ">
+                <div class="col-md-8">
+ 
+                </div>
+                <div class="col-md-4">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Enter Id" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+                <br>
+                <br>
+ 
+                <div class="card" style="border-color: transparent;">
+                    <div class="text-center">
+                        <div class="col-md-12" style="border-color: transparent;">
+                            <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Full Name</th>
+                                    <th scope="col">Password</th>
+                                    <th scope="col">Phone Number</th>
+                                    <th scope="col">Properties</th>
+                                    <th scope="col">Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody *ngFor="let user of users">
+ 
+                                  <tr>
+                                    <td>{{user.id}}</td>
+                                    <td>{{user.userName}}</td>
+                                    <td>{{user.fullName}}</td>
+                                    <td>{{user.password}}</td>
+                                    <td>{{user.phoneNumber}}</td>
+                                    <td>
+                                        <div class="card text-center" style="border-color: transparent;">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <button type="button" routerLink="/admin-propertybyuser/{{user.id}}" class="btn btn-danger ms-3" >Properties</button>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    <td>    
+ 
+ 
+                                        <div class="card text-center" style="border-color: transparent;">
+                                            <div class="row">
+                                                <div class="col-md-3">
+ 
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <button type="button" (click)="onDelete(user.id)" class="btn btn-danger ms-3" >Delete</button>
+                                                </div>
+                                                <!-- <div class="col-md-3">
+                                                    <button type="submit" class="btn btn-success">Edit</button>
+                                                </div> -->
+                                                <div class="col-md-3">
+ 
+                                                </div>
+ 
+                                            </div>
+ 
+                                        </div>
+                                 
+                                  </tr>
+                                </tbody>
+                            </table>
+                            <div class = "text-center">
+                                <button  class="btn btn-success">Get all Customers</button>
+ 
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+ 
+</div>

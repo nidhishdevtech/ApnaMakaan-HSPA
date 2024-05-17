@@ -1,0 +1,90 @@
+<br>
+<br>
+<h4>
+    &nbsp;&nbsp;&nbsp;&nbsp; Product Details
+</h4>
+ 
+<div class="center-container">
+    <div class="card text-center" style="border-color: transparent;">
+        <div>
+           
+        </div>
+        <div class="card-body" style="border-color: transparent;">
+            <div class="row">
+                <div class="col-md-8">
+ 
+                </div>
+                <div class="col-md-4">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Enter Id" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+                <br>
+                <br>
+ 
+                <div class="card" style="border-color: transparent;">
+                    <div class="text-center">
+                        <div class="col-md-12" style="border-color: transparent;">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Sneaker Name</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Property Type</th>
+                                        <th scope="col">City</th>
+                                        <th scope="col">ImageUrl</th>
+                                        <th scope="col">Category Name</th>
+                                        <th scope="col">Action</th>
+
+ 
+                                    </tr>
+                                    </thead>
+                                    <tbody *ngFor="let property of properties">
+                                    <tr>
+                                        <td>{{property.id}}</td>
+                                        <td>{{property.name}}</td>
+                                        <td>{{property.price}}</td>
+                                        <td>{{property.PropertyType}}</td>
+                                        <td>{{property.CityName}}</td>
+                                        <td>{{property.imageUrl}}</td>
+                                        <td>{{property.PropertyType}}</td>
+                                        <td>
+                                            <div class="card text-center" style="border-color: transparent;">
+                                                <div class="row g-2">
+                                                    <div class="col-12 col-md-6">
+                                                      <button type="button" (click)="onDelete(property.id)" class="btn btn-danger ms-3"  >Delete</button>
+                                                        <!-- <button type="submit" class="btn btn-danger w-200">Delete</button> -->
+                                                    </div>
+                                                    <br>
+                                                    
+                                                    <!-- <div class="col-12 col-md-4">
+                                                        <button type="submit" class="btn btn-success w-200">Edit</button>
+                                                    </div> -->
+                                                    <div class="col-md-3">
+                                                        <button type="button" class="btn btn-danger " [routerLink]="['/admin/editproperty',property.id]" >Edit</button>
+                                                    </div>
+     
+                                                </div>
+     
+                                            </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                                <div class = "text-center">
+                                    <button  class="btn btn-success">Get all Properties</button>
+                                </div>
+ 
+ 
+ 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+   
+            </div>
+        </div>
+   
+    </div>

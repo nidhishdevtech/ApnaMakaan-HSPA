@@ -1,0 +1,48 @@
+body {
+  background-image: url('../../../../../assets/images/form-background.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  color: #333;
+  margin-top: 50px;
+  background-color: #333;
+}
+
+.form-container form input,
+.form-container form select,
+.form-container form textarea {
+  background-color: #444444;
+  border: none;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.form-container form button {
+  background-color: #555555;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.form-box {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 600px;
+  margin-top: 2rem;
+}
+
+.form-box form {
+  margin: 0;
+}

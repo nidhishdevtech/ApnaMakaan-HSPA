@@ -1,0 +1,224 @@
+
+<div class="container" style="padding-top: 30px">
+  <div class="row shadow">
+    <div class="col-sm-4 p-0">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img-top" src="{{property?.imageUrl}}" />
+        </div>
+        <div class="card-body">
+          <h1 class="card-title" style="color: blue">{{ property?.name }}</h1>
+          <div>
+            <strong
+              >{{ property?.bhk }} BHK {{ property?.PropertyType }} :
+              {{ property?.price }}</strong
+            >
+          </div>
+          <div>
+            <strong>in {{ property?.CityName }}</strong>
+          </div>
+          <hr />
+          <div>
+            <strong>Build Area: </strong>
+            {{ property?.builtArea }}
+          </div>
+          <div>
+            <strong>Carpet Area: </strong>
+            {{ property?.carpetArea }}
+          </div>
+          <div>
+            <strong>Furnishing Type: </strong>
+            {{ property?.FurnishingType }}
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="btn-group d-flex">
+            <button class="btn btn-primary">Like</button>
+            <button class="btn btn-success">Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-8">
+      <mat-tab-group>
+        <mat-tab label="Overview">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="heading">
+                <strong>Project Name</strong>
+                <p>{{ property?.name }}</p>
+              </div>
+
+              <div class="heading">
+                <strong>Floor Number</strong>
+                <p>{{ property?.floorNo }} of {{ property?.totalFloors }}</p>
+              </div>
+
+              <div class="heading">
+                <strong>Age of Property</strong>
+                <p>{{ property?.ageProperty }}</p>
+              </div>
+
+              <!-- <div class="heading">
+                  <strong>Posession</strong>
+                  <p>{{property.possession | date}}</p>
+              </div> -->
+            </div>
+
+            <div class="col-sm-6">
+              <div class="heading">
+                <strong>Main Entrance</strong>
+                <p>{{ property?.mainEnterance }}</p>
+              </div>
+
+              <!-- <div class="heading">
+                  <strong>Gated Community</strong>
+                  <p *ngIf="property.gated">Yes</p>
+                  <p *ngIf="!property.gated">No</p>
+              </div> -->
+
+              <div class="heading">
+                <strong>Security Deposit</strong>
+                <p>{{ property?.security }}</p>
+              </div>
+              <div class="heading">
+                <strong>Maintenance</strong>
+                <p>{{ property?.mainEnterance }}</p>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="heading">
+                <strong>About Property</strong>
+                <p>{{ property?.description }}</p>
+              </div>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Address">
+          <div class="col-sm-12" style="height: 600px;">
+            <h1>Address</h1>
+            <div class="heading">
+              <strong>Address 1 : {{ property?.address1 }}</strong
+              ><br />
+              <strong>Address 2 : {{ property?.address2 }}</strong
+              ><br />
+              <strong>City : {{ property?.CityName }}</strong>
+            </div>
+            <div class="container"m style="width: 420px; height: 250px;margin-top: 45px;margin-left: 0;margin-right: 0 ;">
+              <img class="imgmap" src="../../../../../assets/images/map.avif" >
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Photos">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner carousel-container">
+              <div class="carousel-item active">
+                <img
+                  src="../../../../../assets/images/livingroom.jpg"
+                  style="height: 350px; width: 300px"
+                  class="d-block w-100"
+                  alt="1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../../../../../assets/images/kitchen.jpg"
+                  style="height: 350px; width: 300px"
+                  class="d-block w-100"
+                  alt="2"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../../../../../assets/images/bathroom.jpg"
+                  style="height: 350px; width: 300px"
+                  class="d-block w-100"
+                  alt="3"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              class="active"
+              data-bs-target="#carouselDemo"
+              data-bs-slide-to="0"
+            >
+              <img src="../../../../../assets/images/livingroom.jpg" />
+            </button>
+
+            <button
+              type="button"
+              data-bs-target="#carouselDemo"
+              data-bs-slide-to="1"
+            >
+              <img src="../../../../../assets/images/kitchen.jpg" />
+            </button>
+
+            <button
+              type="button"
+              data-bs-target="#carouselDemo"
+              data-bs-slide-to="2"
+            >
+              <img src="../../../../../assets/images/bathroom.jpg" />
+            </button>
+          </div>
+        </mat-tab>
+        <mat-tab label="Contact">
+          <h1>Contact Detail</h1>
+          This should be restricted area and only registered user should be able
+          to see seller contact details
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>
